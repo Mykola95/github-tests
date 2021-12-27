@@ -20,12 +20,14 @@ public class SelenideWikiTests {
     @Test
     void shouldBeExampleOfCodeForJunit() {
         open("/");
-        $$(".h1-mktg").first().shouldHave(text("Where the world builds software"));
+//        $$(".h1-mktg").first().shouldHave(text("Where the world builds software"));
+        $(".h1-mktg").shouldHave(text("Where the world builds software"));
 
         $("[name=q]").setValue("Selenide").pressEnter();
-        $$(".f4").get(1).shouldHave(text("selenide/selenide"));
+//        $$(".f4").get(1).shouldHave(text("selenide/selenide"));
+        $(".f4", 1).shouldHave(text("selenide/selenide"));
 
-        $$(".f4").get(1).click();
+        $(".f4", 1).click();
         $("h1").shouldHave(text("selenide / selenide"));
 
         $("#wiki-tab").click();
