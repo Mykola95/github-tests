@@ -1,6 +1,7 @@
 package github.issue.selenidestyle;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import github.issue.TestBase;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,7 @@ public class IssueTests extends TestBase {
 
     @Test
     public void testIssueName() {
-//        SelenideLogger.addListener("allure", new AllureSelenide());
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         open("/");
         $(".header-search-input").click();

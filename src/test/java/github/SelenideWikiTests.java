@@ -1,6 +1,7 @@
 package github;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -19,6 +20,7 @@ public class SelenideWikiTests {
 
     @Test
     void shouldBeExampleOfCodeForJunit() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open("/");
 //        $$(".h1-mktg").first().shouldHave(text("Where the world builds software"));
         $(".h1-mktg").shouldHave(text("Where the world builds software"));

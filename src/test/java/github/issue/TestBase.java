@@ -1,13 +1,9 @@
 package github.issue;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.WebDriverRunner;
 import github.issue.webstepsstyle.steps.WebSteps;
-import io.qameta.allure.Attachment;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-
-import java.nio.charset.StandardCharsets;
 
 public class TestBase {
     public WebSteps steps = new WebSteps();
@@ -18,7 +14,7 @@ public class TestBase {
     }
 
     @AfterEach
-    public void saveSourse() {
+    public void saveSource() {
         steps.attachPageSource();
     }
 }
