@@ -1,7 +1,7 @@
-package github.issue;
+package github.allure;
 
 import com.codeborne.selenide.Configuration;
-import github.issue.webstepsstyle.steps.WebSteps;
+import github.allure.webstepsstyle.steps.WebSteps;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 

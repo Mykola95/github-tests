@@ -1,6 +1,6 @@
-package github.issue.webstepsstyle;
+package github.allure.webstepsstyle;
 
-import github.issue.TestBase;
+import github.allure.TestBase;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

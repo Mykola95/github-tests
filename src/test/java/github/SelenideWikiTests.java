@@ -2,6 +2,7 @@ package github;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +21,10 @@ public class SelenideWikiTests {
 
     @Test
     void shouldBeExampleOfCodeForJunit() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
+                .screenshots(true)
+                .savePageSource(true)
+        );
         open("/");
 //        $$(".h1-mktg").first().shouldHave(text("Where the world builds software"));
         $(".h1-mktg").shouldHave(text("Where the world builds software"));
@@ -39,6 +43,6 @@ public class SelenideWikiTests {
         $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
 
         $("#wiki-pages-box").$(byText("SoftAssertions")).click();
-        $(".markdown-body").shouldHave(text("Using JUnit5 extend test class:"));
+        $(".markdown-body").shouldHave(text("Using vb JUnit5 extend test class:"));
     }
 }

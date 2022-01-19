@@ -1,6 +1,6 @@
-package github.issue.stepsstyle;
+package github.allure.stepsstyle;
 
-import github.issue.TestBase;
+import github.allure.TestBase;
 import io.qameta.allure.Allure;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Test;

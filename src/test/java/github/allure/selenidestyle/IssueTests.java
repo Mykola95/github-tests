@@ -1,9 +1,8 @@
-package github.issue.selenidestyle;
+package github.allure.selenidestyle;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import github.issue.TestBase;
-import org.junit.jupiter.api.BeforeAll;
+import github.allure.TestBase;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;

@@ -1,4 +1,4 @@
-package github.issue.webstepsstyle.steps;
+package github.allure.webstepsstyle.steps;
 
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Attachment;
